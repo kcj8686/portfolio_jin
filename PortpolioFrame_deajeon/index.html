@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="writer" content="changjin Kim">
+  <meta name="description" content="portpolio_frame">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 외부스크립트 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+  <!-- 내꺼 -->
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/custom.js" defer></script>
+  
+  <title>portpolio_frame</title>
+</head>
+<body>
+  <div id="pop_nav">
+    <button type="button" id="goTop"> ↥ </button>
+    <button type="button" id="goBottom"> ↧ </button>
+  </div>
+
+  <div id="wrap">
+
+    <header>
+      <div class="left_head">
+        <div class="rotate">
+          <p>≫</p>
+        </div>
+        <h2><span>대전관광공사</span> &nbsp; 리뉴얼</h2>
+      </div>
+      <div class="right_head">
+        <ul>
+          <li><a href="#">01.<br><span>프로젝트 개요</span></a></li>
+          <li><a href="#">02.<br><span>프로젝트 목표</span></a></li>
+          <li><a href="#">03.<br><span>폰트 / 색상</span></a></li>
+          <li><a href="#">04.<br><span>와이어프레임</span></a></li>
+          <li><a href="#">05.<br><span>페이지설정</span></a></li>
+        </ul>
+      </div>
+      <div class="object">
+        <div class="object1">project</div>
+        <div class="object2">{</div>
+      </div>
+    </header>
+
+    <main role="main">
+
+      <section id="summary">
+        <div class="left_summary">
+          <ul class="summary_head">
+            <li><h3>프로젝트 개요</h3></li>
+            <li><h4>대전관광공사 리뉴얼</h3></li>
+          </ul>
+          <ul class="summary_text">
+            <li>프로젝트 설명 : <span>대전광광공사 리뉴얼</span></li>
+            <li>프로젝트 제작기간 : <span>1개월</span></li>
+            <li>프로젝트 유형 : <span>웹디자인</span></li>
+            <li>프로젝트 참여도 : <span>개인 100%</span></li>
+          </ul>
+        </div>
+        <div class="right_summary">
+          <div class="box_1"></div>
+          <h2>대전관광공사</h2>
+          <img src="img/fullscreen.png" alt="대전관광공사 원본">
+          <div class="box_2"></div>
+        </div>
+      </section>
+
+      <section id="target">
+        <div class="left_target">
+          <img src="img/computer.png" alt="컴퓨터">
+        </div>
+        <div class="right_target">
+          <div class="target_head">
+            <h2>프로젝트 목표</h2>
+            <p> - 사용자의 편의성을 고려한 ui설계</p>
+            <p> - 히어로배너의 개성 어필</p>
+          </div>
+          <img src="img/ipad.png" alt="아이패드 어필">
+          <div class="target_foot">
+            <h2>중점사항</h2>
+            <p> - 히어로페이지의 그림이 고정식으로 되어 화면의 잘림 현상이 일어남</p>
+            <p> - 대전의 주요 관광지에 대해서 빈약함</p>
+            <p> - 의미없는 무분별한 큰 배너를 사용</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="description">
+        <div class="skechi_box">
+          <div class="skechi_left">
+            <img src="img/daejeon_wireframe.jpg" alt="대전관광공사 와이어프레임">
+          </div>
+          <div class="skechi_right">
+            <div class="consept">
+              <h2>컨셉트</h2>
+              <p> - 아이콘을 최대한 사용하여 간결한 ul 구축</p>
+              <p> - 중요하다고 생각하는 네비게이션을 상단에 비치</p>
+              <p> - 히어로페이지 강화</p>
+            </div>
+            <div class="font">
+              <h2>색상 및 폰트</h2>
+              <p> - 폰트는 비교적 깔끔한 노트산스를 선택</p>
+              <p> - 정보의 중요도에 따라 다양한 굴기의 폰트를 사용</p>
+              <p> - 기존의 분위기는 유지하되 몇가지 색 추가</p>
+              <div class="color_bar">
+                <div class="color_bar1"><span>#3C4D61;</span></div>
+                <div class="color_bar2"><span>#326DAB;</span></div>
+                <div class="color_bar3"><span>#E3EEF9;</span></div>
+                <div class="color_bar4"><span>#fff;</span></div>
+              </div>
+              <p>노토산스 KR Regular</p>
+              <p>노토산스 KR Medium</p>
+              <p>노토산스 KR Bold</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="wireframe">
+        <div class="wireframe_left">
+          <img src="img/daejeon_renew.jpg" alt="대전관광공사 리뉴얼">
+        </div>
+        <div class="wireframe_right">
+          <div class="right_text">
+            <p>최상단에 띠광고를 삽입하여 빠르게 중요한 것을<br>캐치할 수 있도록 만들고 히어로배너를 좀더 동적이게<br>만들어서 사용자 편의성을 올림</p>
+            <p>중요하다고 생각하거나 사람들이 자주 찾는<br>메뉴들을 아이콘화 하여 서브네비로 만듬</p>
+            <p>하단에 불필요한 배너들을 전부 제거하고<br>아이콘화함</p>
+          </div>
+        </div>
+      </section>
+      <section id="footer">
+          <img src="img/footer.jpg" alt="배경이미지">
+          <img src="img/cursor.png" alt="마우스 포인터">
+          <p><a href="../index.html">포트폴리오 리스트로 <br> 바로가기 > </a></p>
+          <p><a href="../DeajeonExpor/index.html" target="_blank">대전관광공사 <br> > 바로가기 < </a></p>
+      </section>
+    </main>
+  </div> <!--wrap end-->
+</body>
+</html>
