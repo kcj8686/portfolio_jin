@@ -1,0 +1,103 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* { margin: 0; padding: 0; }
+li { list-style: none; }
+a { text-decoration: none; color: inherit;}
+img { display: block; }
+body { font-family: 'Roboto', sans-serif; }
+
+/* 본문 */
+div#wrap { width: 100%; }
+/* 메인 */
+div#wrap header { width: 100%; height: 100vh; background: center/cover #004098 url(../img/background_port.png) no-repeat; color: #fff; overflow: hidden; }
+div#wrap header div.left_head { position: absolute; top: 300px; left: 300px; }
+div#wrap header div.left_head div.rotate { transform: rotate(90deg); }
+div#wrap header div.left_head p { font-size: 50px; color: #66bbe9; animation: ani .5s infinite alternate; }
+div#wrap header div.left_head h2 { font-size: 40px; }
+div#wrap header div.left_head h2 span { text-decoration: underline; }
+div#wrap header div.right_head { position: absolute; top: 260px; right: 500px; font-size: 20px; line-height: 2; }
+div#wrap header div.right_head span { font-size: 24px; }
+div#wrap header div.object div.object1 { position: absolute; bottom: -50px; left: 260px; font-size: 100px; font-weight: bold; opacity: .5; }
+div#wrap header div.object div.object2 { position: absolute; bottom: -240px; right: 160px; font-size: 460px; font-weight: bold; color: #66bbe9; opacity: .5; }
+@keyframes ani {
+  0% {transform: scale(1); opacity: 1; color: #8aa2b4; }
+  100%{transform: scale(1.1); opacity: .8; color: #b3c4d1; }
+}
+
+
+/* 두번째 페이지 */
+main section#summary:after { content: ""; display: block; clear: both; }
+main section#summary div.left_summary { float: left; width: 50%; position: relative; height: 120vh; }
+main section#summary div.left_summary ul.summary_head { position: absolute; top: 300px; left: 300px; width: 300px; }
+main section#summary div.left_summary ul.summary_text { position: absolute; top: 500px; left: 300px; width: 300px; }
+main section#summary div.left_summary ul.summary_text li { position: relative; }
+main section#summary div.left_summary ul.summary_text li span { position: absolute; right: 0; }
+main section#summary div.right_summary { position: relative; float: left; width: 50%; background-color: #66bbe9; padding: 100px 50px 100px 50px; box-sizing: border-box; }
+main section#summary div.right_summary div.box_1 { border-top: 3px solid #4F5E70; border-left: 3px solid #4F5E70; width: 100px; height: 100px; }
+main section#summary div.right_summary div.box_2 { position: absolute; bottom: 50px; right: 100px; border-bottom: 3px solid #4F5E70; border-right: 3px solid #4F5E70; width: 100px; height: 100px; }
+main section#summary div.right_summary h2 { position: absolute; top: 130px; left: 80px; }
+main section#summary div.right_summary img { width: 500px; height: 700px; margin: 0 auto; }
+
+
+/* 세번째 페이지 */
+main section#target { width: 100%; height: 100vh; background: center/contain url(../img/backfround_page.png) no-repeat; }
+main section#target div.left_target { float: left; width: 50%; }
+main section#target div.left_target img { width: 700px; height: 700px; padding-top: 50px; }
+main section#target div.right_target { float: left; width: 50%; position: relative; }
+main section#target div.right_target div.target_head { position: absolute; top: 180px; left: 140px; }
+main section#target div.right_target div.target_foot { position: absolute; top: 560px; left: 140px;  }
+main section#target div.right_target img { position: absolute; top: 200px; left: 300px; width: 400px; height: 400px; }
+
+
+/* 네번째 페이지 */
+section#description { width: 100%; padding: 100px 0 100px 0; background-color: #66bbe9; }
+section#description div.skechi_box { width: 1280px; height: 760px; background: center/cover #fff url(../img/background_skechi.png) no-repeat; margin: 0 auto; border: 1px solid #707070; }
+section#description div.skechi_box div.skechi_left { float: left; width: 640px; height: 760px; }
+section#description div.skechi_box div.skechi_left img { width: 400px; height: 600px; margin: 80px auto; }
+section#description div.skechi_box div.skechi_right { float: left; width: 640px; height: 760px; padding: 160px 0 0 100px; box-sizing: border-box; }
+section#description div.skechi_box div.skechi_right div.consept { margin-bottom: 30px; }
+section#description div.skechi_box div.skechi_right div.font div.color_bar { position: relative; width: 400px; height: 100px; }
+section#description div.skechi_box div.skechi_right div.font div.color_bar1 { position: absolute; top: 0; width: 400px; height: 30px; border: 1px solid #707070; border-radius: 2em; margin: 30px 0 30px 0; background-color: #004098; }
+section#description div.skechi_box div.skechi_right div.font div.color_bar1 span { position: absolute; right: 20px; color: #fff; }
+section#description div.skechi_box div.skechi_right div.font div.color_bar2 { position: absolute; top: 0; width: 300px; height: 30px; border: 1px solid #707070; border-radius: 2em; margin: 30px 0 30px 0; background-color: #150958; }
+section#description div.skechi_box div.skechi_right div.font div.color_bar2 span { position: absolute; right: 20px; color: #fff; }
+section#description div.skechi_box div.skechi_right div.font div.color_bar3 { position: absolute; top: 0; width: 200px; height: 30px; border: 1px solid #707070; border-radius: 2em; margin: 30px 0 30px 0; background-color: #65bbe9; }
+section#description div.skechi_box div.skechi_right div.font div.color_bar3 span { position: absolute; right: 20px; }
+section#description div.skechi_box div.skechi_right div.font div.color_bar4 { position: absolute; top: 0; width: 100px; height: 30px; border: 1px solid #707070; border-radius: 2em; margin: 30px 0 30px 0; background-color: #0081c5; }
+section#description div.skechi_box div.skechi_right div.font div.color_bar4 span { position: absolute; right: 20px; }
+section#description div.skechi_box div.skechi_right div.font p:nth-of-type(4) { font-size: 16px; }
+section#description div.skechi_box div.skechi_right div.font p:nth-of-type(5) { font-size: 20px; font-weight: 500; margin: 10px 0 10px 0; }
+section#description div.skechi_box div.skechi_right div.font p:nth-of-type(6) { font-size: 24px; font-weight: 900; }
+
+
+/* 다섯번째 페이지 */
+section#wireframe { width: 100%; background: center/contain url(../img/background_line.png) no-repeat; background-color: #66bbe9; position: relative; }
+section#wireframe:after { content: ""; display: block; clear: both; }
+section#wireframe div.arrow_up img { position: absolute; left: 26%; width: 700px; height: 200px; }
+section#wireframe div.arrow_down img { position: absolute; top: 50%;  left: 30%; width: 700px; height: 200px; }
+section#wireframe div.wireframe_left { float: left; background: center url(../img/background_project.png) ; width: 50%; height: 100vh; background-color: #fff; }
+section#wireframe div.wireframe_left img { width: 500px; height: 700px; margin: 0 auto; padding-top: 50px;}
+section#wireframe div.wireframe_right { float: left; width: 50%; position: relative; }
+section#wireframe div.wireframe_right div.right_text { position: absolute; top: 100px; left: 140px; }
+section#wireframe div.wireframe_right div.right_text p { margin-bottom: 100px; }
+
+/* 하단 링크 영역 */
+section#footer { width: 100%; position: relative; }
+section#footer img:nth-child(1) { height: 700px; margin: 0 auto; padding: 100px 0 100px 0; }
+section#footer img:nth-child(2) { width: 80px; height: 80px; position:absolute; bottom: 240px; left: 800px;animation: mouse 3s infinite; }
+section#footer p:nth-of-type(1) { position: absolute; top: 400px; right: 280px; text-align: center; color: #F8AD7B; text-shadow: 1px 1px 1px gray; font-size: 26px; font-weight: bold; }
+section#footer p:nth-of-type(1):hover { transform: scale(1.1); }
+section#footer p:nth-of-type(2) { position: absolute; bottom: 320px; left: 560px; text-align: center; color: #004098; text-shadow: 1px 1px 1px #150958; font-size: 24px; font-weight: bold; }
+section#footer p:nth-of-type(2):hover { transform: scale(1.1); }
+
+@keyframes mouse {
+  0% { bottom: 240px; left: 800px; }
+  100%{ left: 600px; }
+}
+
+
+/* 팝업네비 */
+div#pop_nav { position: absolute; bottom: 100px; right: 100px; width: 40px; height: 80px; z-index: 10; }
+div#pop_nav button { width: 40px; height: 40px; font-size: 30px; }

@@ -1,0 +1,88 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800');
+
+* {margin: 0; padding: 0;}
+ol, ul {list-style: none;}
+a {text-decoration: none; color: inherit;}
+img {border: 0;}
+body {position: fixed; width: 100%; height: 100%; background: #1B2838; font-family: 'Nanum Gothic'; font-weight: 800;}
+video {object-fit: cover; width: 100%; height: 100%; max-width: 100%;}
+
+div#wrap {position: fixed; width: 100%; height: 100%; min-width: 1024px; perspective: 900px;}
+
+/* 메뉴호출버튼 */
+a.btnMenu {position: fixed; top: 50px; left: 40px; display: inline-block; width: 20px; height: 70px; text-align: center; font-size: 40px; color: #fff; z-index: 3; animation: ani .5s infinite alternate;}
+@keyframes ani {
+  0% {transform: scale(1); opacity: 1; color: #2A475E;}
+  100%{transform: scale(1.5); opacity: .8; color: #66c0f4;}
+}
+
+/* 카테고리 그룹 */
+nav {position: fixed; width: 150px; height: 100%; background-color: #171a21; z-index: 2; transform: rotateY(120deg); transform-origin: left center; opacity: 0; transition: all .8s;}
+nav.on {transform: rotateY(15deg); opacity: 1;}
+
+/* 로고 */
+nav h1 {width: 100px; position: absolute; top: 80px; left: 50%; margin-left: -35%;}
+nav h1 img {width: 100%;}
+
+/* 카테고리 메뉴 */
+nav ul {position: absolute; top: 35%; left: 0; width: 100%;}
+nav ul li a {display: block; width: 100%; box-sizing: border-box; font-size: 18px; line-height: 4; color: #66c0f4; text-align: center; transition: all .5s;}
+nav ul li:hover a {color: #fff; background: linear-gradient(to left, #2A475E, #66c0f4);}
+
+/* 콘텐츠 그룹 */
+section {position: fixed; width: 100%; height: 100%; z-index: 1; transform-origin: right center; transition: all .5s;}
+section.on {transform: rotateY(-10deg); background-color: #1B2838;}
+section > div {position: absolute; width: 100%; height: 100%; z-index: 1; opacity: 0; perspective: 700px; transition: all 1.5s;}
+section > div.on {z-index: 2; opacity: 1;}
+section > div > p {box-sizing: border-box; text-align: center; overflow: hidden; transform: rotateY(180deg); transition: all 1.5s;}
+section > div.on > p {transform: rotateY(0deg);}
+
+section > div > p > span {display: block; text-align: center; position: absolute; width: 100%; top: 50%; margin-top: -10px; font-size: 20px; color: #66c0f4;}
+section > div > p > strong {display: block; text-align: center; position: absolute; width: 100%; top: 50%; font-size: 50px; color: rgba(255, 255, 255, .7); margin-top: -25px;}
+
+section > div > p > video {width: 100%;}
+
+
+/* box1 */
+section > div.box1 > p {height: 25%; float: left; text-align: center; position: relative;}
+section > div.box1 > p:nth-child(1) {width: 50%; background: center/contain #203648 url(../img/main_logo.png) no-repeat }
+section > div.box1 > p:nth-child(2) {width: 25%; background: url(../img/steam_best.png) no-repeat right center/cover;}
+section > div.box1 > p:nth-child(3) {width: 25%; background-color: #2A475E;}
+section > div.box1 > p:nth-child(4) {width: 50%; height: 50%; float: right; }
+section > div.box1 > p:nth-child(5) {width: 25%; background: center/cover url(../img/red.jpg) no-repeat; float: right;}
+section > div.box1 > p:nth-child(6) {width: 25%; background-color: #2A475E; float: right;}
+section > div.box1 > p:nth-child(7) {width: 25%; float: right; background-color: #2A475E;}
+section > div.box1 > p:nth-child(8) {width: 25%; float: right; background: center/cover url(../img/cyberpunk_title.gif) no-repeat;}
+section > div.box1 > p:nth-child(9) {width: 25%; background-color: #2A475E; }
+section > div.box1 > p:nth-child(10) {width: 50%; background: bottom/cover url(../img/cyberpunk_img_01.jpg) no-repeat;}
+section > div.box1 > p:nth-child(11) {width: 25%;  float: right;}
+
+/* box2 */
+section > div.box2 > p {height: 25%; float: left;}
+section > div.box2 > ul { width: 50%; height: 100%; float: left; }
+section > div.box2 > p:nth-child(2) {width: 25%; background: top/cover url(../img/gift_mix.png) no-repeat;}
+section > div.box2 > p:nth-child(3) {width: 25%; background: center url(../img/gift_20.png) no-repeat; }
+section > div.box2 > p:nth-child(4) {width: 25%; height: 49.9%; background: center/cover url(../img/theme.png) no-repeat; }
+section > div.box2 > p:nth-child(5) {width: 25%; }
+section > div.box2 > p:nth-child(6) {width: 25%; background: center/cover url(../img/cyberpunk_img_02.jpg) no-repeat;}
+section > div.box2 > p:nth-child(7) {width: 25%; background-color: #2A475E; }
+section > div.box2 > p:nth-child(8) {width: 25%; }
+
+/* box3 */
+section > div.box3 > p {width: 25%; height: 25%; float: left;}
+section > div.box3 > p:nth-child(1) {width: 50%; background: url(../img/Steam_Deck_colored_logo.svg.png) no-repeat center center/cover; background-color: #fff;}
+section > div.box3 > p:nth-child(2) {width: 25%; background-color: #fff;}
+section > div.box3 > p:nth-child(3) {width: 25%;  background-color: #1B2838;}
+section > div.box3 > p:nth-child(4) {width: 100%; height: 49.9%; background: center url(../img/steamdeck_img.png) no-repeat; display: flex; justify-content: center; align-items: center; position: relative;}
+section > div.box3 > p.video video { width: 26%; height: 58%; position: absolute; top: 21%; left: 37.2%; }
+section > div.box3 > p:nth-child(5) {width: 25%; background: url(../img/steamdeck_wire.png) no-repeat center center/contain; background-color: #1B2838;}
+section > div.box3 > p:nth-child(6) {width: 50%; background-color: #1B2838; }
+section > div.box3 > p:nth-child(6) strong {animation: pay .5s infinite alternate; }
+section > div.box3 > p:nth-child(7) {width: 25%; background: url(../img/steamdeck_real.png) no-repeat center/cover; background-color: #1B2838;}
+@keyframes pay {
+  0% {transform: scale(1); opacity: 1; color: #2A475E;}
+  100%{transform: scale(1.1); opacity: .8; color: #fff;}
+}
+

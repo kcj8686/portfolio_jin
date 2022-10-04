@@ -73,8 +73,10 @@ section#description div.skechi_box div.skechi_right div.font p:nth-of-type(6) { 
 
 
 /* 다섯번째 페이지 */
-section#wireframe { width: 100%; background: center/contain url(../img/background_line.png) no-repeat; background-color: #E3EEF9; }
+section#wireframe { width: 100%; background: center/contain url(../img/background_line.png) no-repeat; background-color: #E3EEF9; position: relative; }
 section#wireframe:after { content: ""; display: block; clear: both; }
+section#wireframe div.arrow_up img { position: absolute; left: 26%; width: 700px; height: 200px; }
+section#wireframe div.arrow_down img { position: absolute; top: 50%;  left: 30%; width: 700px; height: 200px; }
 section#wireframe div.wireframe_left { float: left; background: center url(../img/background_project.png) ; width: 50%; height: 100vh; background-color: #fff; }
 section#wireframe div.wireframe_left img { width: 500px; height: 700px; margin: 0 auto; padding-top: 50px;}
 section#wireframe div.wireframe_right { float: left; width: 50%; position: relative; }

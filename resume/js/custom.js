@@ -103,7 +103,7 @@ $('.count-num').each(function() {
 // 원형바
 $(function(){
   $('.chart').easyPieChart({
-    size: 160,
+    size: 100,
     barColor: '#ffffffe6',
     scaleLength: 0,
     lineWidth: 15,
