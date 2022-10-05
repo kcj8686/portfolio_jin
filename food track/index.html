@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="writer">
+  <meta name="description" content="explanation">
+  <meta name="viewport" content="width=device=width, initial-scale=1.0">
+
+<!-- 외부 -->
+  <script src="js/jquery-3.6.1.min.js"></script>
+  <script src="bootstrap-5.1.3-plog/js/bootstrap.bundle.js"></script>
+  <script src="js/aos.js"></script>
+
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="bootstrap-5.1.3-plog/css/bootstrap.css">
+  <link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+
+  
+<!-- 내꺼 -->
+<script src="js/custom.js" defer></script>
+<link rel="stylesheet" href="css/style.css">
+
+  <title>Officer_home</title>
+</head>
+<body>
+<header class="p-3">
+    <div class="container-fluid">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="#" class="d-flex align-items-center mb-2 mb-lg-0 me-3 text-white text-decoration-none">
+          <img src="img/food truck design.png" alt="LOGO" width="80" height="68">
+        </a>
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">Foods</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">Event</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+        </ul>
+        <form class="d-flex col-12 col-lg-auto mb-3 mb-lg-0">
+          <input type="search" class="form-control form-control-dark me-1" placeholder="Search..." aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <main role="main">
+
+    <section id="figure">
+      <div class="video_box">
+        <video class="img-fluid" src="img/food.mp4" autoplay muted loop preload="auto"></video>
+      </div>
+      <div class="text_box">
+        <h1>푸드트럭이란</h1>
+        <p>푸드트럭은 음식을 조리하고 판매 할 수 있는 대형 차량이다. 냉동되거나 미리 포장 된 음식을 판매하는<br>
+          푸드 트럭도 있는 반면, 원재료만 가지고 직접 그 자리에서 조리하는 형태 등 다양한 형태의 푸드트럭이 있다.</p>
+        <a href="#">lean more</a>
+      </div>
+    </section>
+
+    <section id="contents">
+      <div class="container" data-aos="fade-down">
+        <div class="row text-center">
+          <div class="col-12">
+            <h1>푸트트럭 이미지</h1>
+          </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-3 col-sm-6 pt-3">
+            <div class="card">
+              <img src="img/food_1.jpg" class="card-img-top" alt="푸드트럭 이미지_1">
+              <div class="card-body">
+                <h5 class="card-title">푸드트럭의 개요</h5>
+                <p class="card-text">말 그대로 작은 트럭을 주방처럼 개조해서 포장마차형 음식점을 운영하는 것. 성룡 주연의 영화 쾌찬차를 보면 1980년대 옛날 영화임에도......</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 pt-3">
+            <div class="card">
+              <img src="img/food_2.jpg" class="card-img-top" alt="푸드트럭 이미지_2">
+              <div class="card-body">
+                <h5 class="card-title">대한민국에서의 푸드트럭</h5>
+                <p class="card-text">대한민국의 경우에는 작은 트럭을 개조해서 포장마차로 만든 다음에 거기서 간단한 식재료를 비치해서 간단한 음식을 만들어 팔며.....</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 pt-3">
+            <div class="card">
+              <img src="img/food_3.jpg" class="card-img-top" alt="푸드트럭 이미지_3">
+              <div class="card-body">
+                <h5 class="card-title">푸드트럭의 역사</h5>
+                <p class="card-text">미국에서의 푸드트럭의 역사는 꽤 오래되었는데, 1860~1880년대까지 조그만 마차나 손수레를 개조해서 샌드위치나 고기 요리 같은......</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 pt-3">
+            <div class="card">
+              <img src="img/food_4.jpg" class="card-img-top" alt="푸드트럭 이미지_4">
+              <div class="card-body">
+                <h5 class="card-title">푸드트럭의 매력</h5>
+                <p class="card-text">푸드트럭의 장점은 레스토랑이나 여타 음식점 설립 비용에 비해 트럭을 마련·개조하고 요리 도구와 식재료를 구비하는 과정에서 드는...... </p>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  클릭해주세요
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  
+  <div class="container-fluid bg-dark text-white">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top">
+      <div class="col-md-4 d-flex align-items-center">
+        <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+          <img src="img/food truck design.png" width="100" height="100">
+        </a>
+        <span>&copy; 2022 Company, Inc</span>
+      </div>
+      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+        <li class="ms-3"><a href="#"><i class="bi bi-twitter"></i></a></li>
+        <li class="ms-3"><a href="#"><i class="bi bi-instagram"></i></a></li>
+        <li class="ms-3"><a href="#"><i class="bi bi-facebook"></i></a></li>
+      </ul>
+    </footer>
+  </div>
+
+
+<!-- Modal -->
+<div class="modal animate__animated animate__backInDown" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">푸트드럭의 매력</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        푸드트럭의 장점은 레스토랑이나 여타 음식점 설립 비용에 비해 트럭을 마련·개조하고 요리 도구와 식재료를 구비하는 과정에서 드는 비용이 적다는 것이다. 단점은 트럭을 운영하는데 필요한 휘발유 같은 연료비와 위생 문제가 있다. 그런 이유로 뉴욕 시같은 경우는 푸드트럭에 대한 시 위생국의 검사가 매우 까다롭게 이루어지고 있으며, 더 중요한 것은 푸드트럭으로 영업하기 위해서는 '노점상 허가증(Vendor License)'을 반드시 발급받아야 한다. 물론 유효기간이 있기 때문에 갱신해야 하는 것은 덤.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</body>
+</html>
