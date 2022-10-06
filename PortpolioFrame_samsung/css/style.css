@@ -84,17 +84,17 @@ section#wireframe div.wireframe_right div.right_text { position: absolute; top: 
 section#wireframe div.wireframe_right div.right_text p { margin-bottom: 100px; }
 
 /* 하단 링크 영역 */
-section#footer { width: 100%; position: relative; }
+section#footer { width: 1280px; position: relative; margin: 0 auto; }
 section#footer img:nth-child(1) { height: 700px; margin: 0 auto; padding: 100px 0 100px 0; }
-section#footer img:nth-child(2) { width: 80px; height: 80px; position:absolute; bottom: 240px; left: 800px;animation: mouse 3s infinite; }
-section#footer p:nth-of-type(1) { position: absolute; top: 400px; right: 280px; text-align: center; color: #F8AD7B; text-shadow: 1px 1px 1px gray; font-size: 26px; font-weight: bold; }
+section#footer img:nth-child(2) { width: 80px; height: 80px; position:absolute; bottom: 240px; animation: mouse 3s infinite; }
+section#footer p:nth-of-type(1) { position: absolute; top: 360px; right: 170px; text-align: center; color: #F8AD7B; text-shadow: 1px 1px 1px gray; font-size: 26px; font-weight: bold; }
 section#footer p:nth-of-type(1):hover { transform: scale(1.1); }
-section#footer p:nth-of-type(2) { position: absolute; bottom: 320px; left: 560px; text-align: center; color: #004098; text-shadow: 1px 1px 1px #150958; font-size: 24px; font-weight: bold; }
+section#footer p:nth-of-type(2) { position: absolute; bottom: 320px; left: 460px; text-align: center; color: #fff; text-shadow: 1px 1px 1px gray; font-size: 24px; font-weight: bold; }
 section#footer p:nth-of-type(2):hover { transform: scale(1.1); }
 
 @keyframes mouse {
-  0% { bottom: 240px; left: 800px; }
-  100%{ left: 600px; }
+  0% { bottom: 240px; left: 700px; }
+  100%{ left: 460px; }
 }
 
 
