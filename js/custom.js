@@ -1,53 +1,71 @@
-$(document).ready(function(){
-
-  
-// 마우스 드래그시 메인 이동
-  $('section.circle ul').draggable({axis: "x"});
-
-
-// 마우스 휠시 메인 이동
-  $(function() {
-    $(window).on('scroll', function(e) {
-      scrollWhell = $(window).scrollTop();
-      $("section.circle ul").css("left", -scrollWhell);
-      // $("section.circle ul").css("left", scrollTop('500px'));
-      e.preventDefault();
-      // document.documentElement.style.overflowY = "hidden";
-      // document.documentElement.style.overflowY = "auto";
-    });
-  });
-
-
-// 주 메뉴 클릭시 메인이동
-$('main nav ul li').click(function(e){
-  e.preventDefault();
-  let ht = $('main').height();
-  let i = $(this).index();
-  console.log(i);
-  let nowTop = i*ht;
-  console.log(nowTop);
-  $('html, body').stop().animate({
-    scrollTop : nowTop
-  },1400);
-});
-
-
-// 스크롤 될떄마다 해당 메뉴 활성화
-$('main').scroll(function(){
-  // ht에 window 높이값 저장
-  let ht = $('main').height();
-  // scroll에 현재 문서가 스크롤 된 거리 저장
-  let scroll = $('main').scrollTop();
-  // console.log(scroll);
-  for (let i = 0; i < 3; i++) {
-    if (scroll >= ht*i && scroll < ht*(i+1)) {
-      $('main nav ul li').removeClass();
-      $('main nav ul li').eq(i).addClass('on');
+// 리스트 스와이프
+var swiper = new Swiper(".mySwiper", {
+        mousewheel: {
+          invert: false,
+        },
+        // Default parameters
+        direction: 'vertical',
+        slidesPerView: 1,
+        spaceBetween: 10,
+        
+  // Responsive breakpoints
+  breakpoints: {
+    // when window width is >= 768px
+    // 768: {
+    //   direction: 'vertical',
+    //   slidesPerView: 1,
+    //   spaceBetween: 10
+    // },
+    // when window width is >= 480px
+    994: {
+      direction: 'horizontal',
+      slidesPerView: 2,
+      spaceBetween: 80
+      
+    },
+    // when window width is >= 1199px
+    1199: {
+      direction: 'horizontal',
+      slidesPerView: 2.4,
+      spaceBetween: 120,
+      pagination: {
+        direction: 'horizontal',
+        el: ".swiper-pagination",
+        clickable: true,
+      },
     }
-  }
-});
+  },
+      });
 
 
+      (function() {
+        /* Easy selector helper function*/
+        const select = (el, all = false) => {
+          el = el.trim()
+          if (all) {
+            return [...document.querySelectorAll(el)]
+          } else {
+            return document.querySelector(el)
+          }
+        }
 
+        /* Easy event listener function*/
+        const on = (type, el, listener, all = false) => {
+          let selectEl = select(el, all)
+          if (selectEl) {
+            if (all) {
+              selectEl.forEach(e => e.addEventListener(type, listener))
+            } else {
+              selectEl.addEventListener(type, listener)
+            }
+          }
+        }
 
-});
+        /* Mobile nav toggle*/
+        on('click', '.mobile-nav-toggle', function(e) {
+          select('body').classList.toggle('mobile-nav-active')
+          this.classList.toggle('bi-list')
+          this.classList.toggle('bi-x')
+        })
+        
+      })()

@@ -2,68 +2,315 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
-* {margin: 0; padding: 0;}
-li {list-style: none;}
-a {text-decoration: none; color: inherit;}
-img {display: block;}
-body {font-family: 'Noto Sans KR', sans-serif; background-color: #FAF0E4; color: #A3B6C5;}
+* { margin: 0; padding: 0; }
+li { list-style: none; }
+a { text-decoration: none; color: inherit; }
+img { display: block; }
+body{-ms-overflow-style: none; font-family: 'Noto Sans KR', sans-serif; }
+::-webkit-scrollbar {display: none;}
 
 
-/* 좌측 프로필 */
-div#wrap { width: 100%; height: 100%; }
-header { position: fixed; z-index: 10000; }
-header div.profile { width: 460px; height: 100vh; padding-left: 40px; padding-top: 40px; box-sizing: border-box; background-color: #FAF0E4; }
-header div.profile > h1 { font-size: 72px; font-weight: 500; }
-header div.profile > h1 > span { font-weight: 900;}
-header div.profile > div.header_img { width: 420px; margin-top: 20px; }
-header div.profile > div.header_img > p { width: 300px; height: 300px; margin: 0 auto; border-radius: 50%; background-color: rgba(255, 255, 255, .5); }
-header div.profile > div.header_img > p > a > img { width: 260px; height: 260px; border-radius: 50%; padding: 20px 20px; }
-header div.profile > div.header_foot { width: 100%; text-align: center; position: relative; padding-bottom: 75px; box-sizing: border-box; }
-header div.profile > div.header_foot > strong { font-size: 48px; font-weight: 500; animation: ani .5s infinite alternate; }
-@keyframes ani {
-  0% {transform: scale(1); opacity: 1; color: #8aa2b4}
-  100%{transform: scale(1.1); opacity: .8; color: #b3c4d1;}
+/* header */
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 360px;
+  transition: all ease-in-out 0.5s;
+  z-index: 9997;
+  transition: all 0.5s;
+  padding: 0 15px;
+  background: #040b14;
+  overflow-y: auto;
 }
-header div.profile > div.header_foot > img  {width: 50px; height: 50px; position: absolute; top: 80px;left: 280px;}
+#header .profile {
+  margin-top: 60px;
+}
+#header .profile img {
+  margin: 15px auto;
+  display: block;
+  width: 180px;
+  border: 8px solid #2c2f3f;
+}
+#header .profile h1 {
+  font-size: 24px;
+  margin: 0;
+  padding: 50px 0;
+  font-weight: 600;
+  -moz-text-align-last: center;
+  text-align-last: center;
+  font-family: "Poppins", sans-serif;
+}
+#header .profile h1 span {
+  text-decoration: underline;
+  font-size: 28px;
+  font-weight: bold;
+}
+#header .profile .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #212431;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+#main {
+  margin-left: 360px;
+}
+@media (max-width: 1199px) {
+  #header {
+    left: -360px;
+  }
+  #main {
+    margin-left: 0;
+  }
+}
 
 
-/* 우측 네비 */
-main { width: 69.7%; height: 5000px; margin-left: 460px;}
-main nav {position:fixed; right:10%; top:5%; z-index: 10000;}
-main nav ul {margin: 0 auto; width: 500px; font-size: 48px; font-weight: 500; }
-main nav ul:after {content: ""; display: block; clear: both;}
-main nav ul li {float:left; margin-left:50px; padding-top:5px;}
-main nav ul li:not(:first-child) {margin-left: 150px;}
+/* nav */
+.nav-menu {
+  padding: 30px 0 0 0;
+}
+.nav-menu * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.nav-menu>ul>li {
+  position: relative;
+  white-space: nowrap;
+}
+.nav-menu a,
+.nav-menu a:focus {
+  display: flex;
+  align-items: center;
+  color: #a8a9b4;
+  padding: 12px 130px;
+  
+  margin-bottom: 8px;
+  transition: 0.3s;
+  font-size: 20px;
+}
+.nav-menu a:hover,
+.nav-menu .active,
+.nav-menu .active:focus,
+.nav-menu li:hover>a {
+  text-decoration: none;
+  color: #fff;
+}
+.nav-menu a:hover i,
+.nav-menu .active i,
+.nav-menu .active:focus i,
+.nav-menu li:hover>a i {
+  color: #149ddd;
+}
+.nav-menu ul li a i {
+  margin-left: 20px;
+}
 
-main nav ul li.on {text-decoration: underline;}
+
+/* Mobile Navigation */
+.mobile-nav-toggle {
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  z-index: 9998;
+  border: 0;
+  font-size: 24px;
+  transition: all 0.4s;
+  outline: none !important;
+  background-color: #149ddd;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.mobile-nav-active {
+  overflow: hidden;
+}
+.mobile-nav-active #header {
+  left: 0;
+}
 
 
-/* 우측 콘텐츠 */
-main section.circle {position:fixed; top:0; left:0; width:100%; color:#fff; height:100%;}
-main section.circle ul {position:relative; width:5180px; overflow:hidden; top:50%; transform:translateY(-40%);}
-/* main section.circle ul::-webkit-scrollbar {display: none;} */
-main section.circle ul:hover {cursor: move; }
-main section.circle ul li {width:440px; height:440px; float:left; -webkit-clip-path:circle(50%); transition:all 0.5s; float:left; margin-left:120px; background:white; }
-main section.circle ul li:nth-of-type(1) {margin-left:35vw;}
-main section.circle ul li a {position:relative; overflow:hidden; display:block;}
+/* main head */
+.breadcrumbs {
+  padding: 20px 0;
+  background: #eee;
+}
+.breadcrumbs h2 {
+  font-size: 26px;
+  font-weight: 300;
+}
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+}
+.breadcrumbs ol li+li {
+  padding-left: 10px;
+}
+.breadcrumbs ol li+li::before {
+  display: inline-block;
+  padding-right: 10px;
+  color: #0e2442;
+  content: "/";
+}
 
-/* 이미지들 */
-main section.circle ul li a div.img_1 {background: center/cover url(../img/expo.jpg) no-repeat; height:440px; transition:all 0.5s;}
-main section.circle ul li a div.img_2 {background: center/cover url(../img/samsung.jpg) no-repeat; height:440px; transition:all 0.5s;}
-main section.circle ul li a div.img_3 {background: center/cover url(../img/Destiny2.jpg) no-repeat; height:440px; transition:all 0.5s;}
-main section.circle ul li a div.img_4 {background: center/cover url(../img/hotel.jpg) no-repeat; height:440px; transition:all 0.5s;}
-main section.circle ul li a div.img_5 {background: top/cover url(../img/korea\ 4\ seasons.jpg) no-repeat; height:440px; transition:all 0.5s;}
-main section.circle ul li a div.img_6 {background: top/cover url(../img/steam.jpg) no-repeat; height:440px; transition:all 0.5s;}
-main section.circle ul li a div.img_7 {background: top/cover url(../img/food_1.jpg) no-repeat; height:440px; transition:all 0.5s;}
+@media (max-width: 768px) {
+  .breadcrumbs .d-flex {
+    display: block !important;
+  }
+  .breadcrumbs ol {
+    display: block;
+  }
+  .breadcrumbs ol li {
+    display: inline-block;
+  }
+}
 
 
-main section.circle ul li a div.blackHover {opacity:0; position:absolute; width:100%; height:100%; top:0; left:0; background:rgba(0,0,0,0.8); z-index:10; text-align:center; transition: all 1s;}
-main section.circle ul li a:hover div.blackHover {opacity:1;}
-main section.circle ul li a div.blackHover div.projectInfo {position:relative; top:50%; transform:translateY(-50%); color:white;}
-main section.circle ul li a div.blackHover h2 {font-weight:700; font-size:25px;}
-main section.circle ul li a div.blackHover h3 {font-weight:400; font-size:16px; margin:30px 0;}
-main section.circle ul li a div.blackHover h4 {font-weight:500; font-size:40px;}
+/* swiper */
+article.inner-page {
+  position: relative;
+  background: #f9f9f9;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+article.inner-page i {
+  font-size: 30px;
+  padding-top: 70px; 
+  margin-bottom: -100px;
+}
+article.inner-page div.list div.mySwiper {
+  height: 100vh;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  width: 440px;
+  height: 440px;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+article.inner-page div.list div.mySwiper div.box div.img_box div.web a div.blackHover {
+  opacity:0; 
+  position:absolute; 
+  width:100%; 
+  height:100%; 
+  top:0; 
+  left:0; 
+  background:rgba(0,0,0,0.8); 
+  z-index:100; 
+  text-align:center; 
+  transition: all 1s;
+}
+article.inner-page div.list div.mySwiper div.box div.img_box div.web a:hover div.blackHover {
+  opacity:1;
+}
+article.inner-page div.list div.mySwiper div.box div.img_box div.web a div.blackHover div.projectInfo {
+  position:relative; 
+  top:50%; 
+  transform:translateY(-50%); 
+  color:white;
+}
+article.inner-page div.list div.mySwiper div.box div.img_box div.web a div.blackHover h2 {
+  font-weight:700; 
+  font-size:25px;
+}
+article.inner-page div.list div.mySwiper div.box div.img_box div.web a div.blackHover h3 {
+  font-weight:400; 
+  font-size:16px; 
+  margin:30px 0;
+}
+article.inner-page div.list div.mySwiper div.box div.img_box div.web a div.blackHover h4 {
+  font-weight:500; 
+  font-size:40px;
+}
+article.inner-page div.button { 
+  position: absolute; 
+  bottom: 100px;
+}
+
+@media (max-width: 768px) {
+  article.inner-page > i.hide { 
+    visibility:hidden
+  }
+  article.inner-page div.list {
+    margin-top: 140px;
+  }
+  article.inner-page div.list div.mySwiper div.button {
+    display: none;
+  }
+  article.inner-page div.list div.mySwiper div.box div.img_box div.web a div.blackHover {
+    height: 41%; 
+  }
+}
+/* images */
+article.inner-page div.list div.mySwiper div.box div.img_box div.web a div.img_01 {background: center/cover url(../img/expo.jpg) no-repeat; height:440px; transition:all 0.5s;}
+article.inner-page div.list div.mySwiper div.box div.img_box div.web a div.img_02 {background: center/cover url(../img/samsung.jpg) no-repeat; height:440px; transition:all 0.5s;}
+article.inner-page div.list div.mySwiper div.box div.img_box div.web a div.img_03 {background: center/cover url(../img/Destiny2.jpg) no-repeat; height:440px; transition:all 0.5s;}
+article.inner-page div.list div.mySwiper div.box div.img_box div.web a div.img_04 {background: center/cover url(../img/hotel.jpg) no-repeat; height:440px; transition:all 0.5s;}
+article.inner-page div.list div.mySwiper div.box div.img_box div.web a div.img_05 {background: center/cover url(../img/korea\ 4\ seasons.jpg) no-repeat; height:440px; transition:all 0.5s;}
+article.inner-page div.list div.mySwiper div.box div.img_box div.web a div.img_06 {background: center/cover url(../img/steam.jpg) no-repeat; height:440px; transition:all 0.5s;}
+article.inner-page div.list div.mySwiper div.box div.img_box div.web a div.img_07 {background: center/cover url(../img/food_1.jpg) no-repeat; height:440px; transition:all 0.5s;}
 
 
-/* 문양 */
-main section.foot { position: fixed; bottom: -10px; left: 900px; box-sizing: border-box; text-align: center; height: 170px;  font-size: 148px; font-weight: 700; color: rgba(163, 182, 197, .2); z-index: -1;}
+/* footer */
+#footer {
+  padding: 15px;
+  margin-left: 28px;
+  
+  color: #f4f6fd;
+  font-size: 14px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  z-index: 9999;
+  background: #040b14;
+}
+#footer .copyright {
+  text-align: center;
+}
+#footer .credits {
+  padding-top: 5px;
+  text-align: center;
+  font-size: 13px;
+  color: #eaebf0;
+}
+
+@media (max-width: 1199px) {
+  #footer {
+    width: 100%;
+    padding-right: 20px 15px;
+    margin: 0;
+  }
+}

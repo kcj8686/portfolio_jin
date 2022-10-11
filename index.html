@@ -3,141 +3,193 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="author" content="chanhjin Kim">
-  <meta name="description" content="mainpage">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- 외부 -->
+<!-- 외부 -->
   <script src="js/jquery-3.6.1.min.js"></script>
-  <script src="js/jquery-ui.min.js"></script>
-  <link rel="stylesheet" href="css/all.min.css">
-  
+  <script src="plug/bootstrap-5.1.3-plog/js/bootstrap.bundle.min.js"></script>
+  <script src="plug/swiper-8.4.3_package/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="plug/bootstrap-5.1.3-plog/css/bootstrap.css">
+  <link rel="stylesheet" href="plug/swiper-8.4.3_package/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="plug/bootstrap-icons/bootstrap-icons.css">
+
 <!-- 내꺼 -->
   <script src="js/custom.js" defer></script>
   <link rel="stylesheet" href="css/style.css">
 
   <title>포트폴리오 리스트</title>
 </head>
-
 <body>
-  <div id="wrap">
+  <!-- ======= Mobile nav toggle button ======= -->
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
 
-    <!-- 좌측 프로필 -->
-    <header>
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+
       <div class="profile">
-        <h1>안녕하세요!<br><span>김창진</span>입니다.</h1>
-        <div class="header_img">
-          <p>
-            <a href="#"><img src="img/prifile.jpg" alt="증명사진"></a>
-          </p>
+        <h1 class="text-light">안녕하세요! <br>
+        <span>김창진</span>
+        입니다!
+      </h1>
+        <img src="img/prifile.jpg" alt="내 사진" class="img-fluid rounded-circle">
+      </div>
+
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          <li><a href="resume/index.html"><span class="animate__animated animate__heartBeat animate__infinite">Profile</span></a></li>
+          <li><a href="#"><i class="bi bi-hand-index animate__animated animate__bounce animate__infinite"></i></a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+    </div>
+  </header><!-- End Header -->
+  
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>포트폴리오 리스트</h2>
+          <ol>
+            <li class="on"><a href="#">Web</a></li>
+            <li><a href="#">Mobile</a></li>
+          </ol>
         </div>
-        <div class="header_foot">
-          <strong><a href="resume/index.html">profile</a></strong>
-          <img src="img/cursor.png" alt="마우스">
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <article class="inner-page">
+      <i class="hide bi bi-arrow-right-circle d-flex align-items-center justify-content-center animate__animated animate__rotateIn animate__infinite"></i>
+      <i class="bi bi-chevron-double-up d-flex align-items-center justify-content-center d-md-none animate__animated animate__slideOutUp animate__infinite"></i>
+      <div class="container list">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper d-flex align-items-center box">
+            <div class="swiper-slide img-fluid rounded-circle img_box">
+              <div class="web">
+                <a href="PortpolioFrame_deajeon/index.html">
+                  <div class="img_01 img-fluid rounded-circle"></div>
+                  <div class="blackHover img-fluid rounded-circle">
+                    <div class="projectInfo">
+                      <h2>web design</h2>
+                      <h3>웹사이트 리뉴얼</h3>
+                      <h4>대전관광공사</h4>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide img-fluid rounded-circle img_box">
+              <div class="web">
+                <a href="PortpolioFrame_samsung/index.html">
+                  <div class="img_02 img-fluid rounded-circle"></div>
+                  <div class="blackHover img-fluid rounded-circle">
+                    <div class="projectInfo">
+                      <h2>팀 과제</h2>
+                      <h3>웹사이트 리뉴얼</h3>
+                      <h4>삼성레포츠센터</h4>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide img-fluid rounded-circle img_box">
+              <div class="web">
+                <a href="Destiny2/index.html" target="_blank">
+                  <div class="img_03 img-fluid rounded-circle"></div>
+                  <div class="blackHover img-fluid rounded-circle">
+                    <div class="projectInfo">
+                      <h2>web design</h2>
+                      <h3>마우스 무빙 코딩</h3>
+                      <h4>데스티니 가디언즈</h4>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide img-fluid rounded-circle img_box">
+              <div class="web">
+                <a href="Hotel theme/index.html" target="_blank">
+                  <div class="img_04 img-fluid rounded-circle"></div>
+                  <div class="blackHover img-fluid rounded-circle">
+                    <div class="projectInfo">
+                      <h2>web design</h2>
+                      <h3>반응형 및 테마변경</h3>
+                      <h4>호텔 여름/겨울 이벤트</h4>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide img-fluid rounded-circle img_box">
+              <div class="web">
+                <a href="korea 4 seasons/index.html" target="_blank">
+                  <div class="img_05 img-fluid rounded-circle"></div>
+                  <div class="blackHover img-fluid rounded-circle">
+                    <div class="projectInfo">
+                      <h2>web design</h2>
+                      <h3>마우스 호버 및 제이쿼리</h3>
+                      <h4>한국의 사계절</h4>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide img-fluid rounded-circle img_box">
+              <div class="web">
+                <a href="steam/inderx.html" target="_blank">
+                  <div class="img_06 img-fluid rounded-circle"></div>
+                  <div class="blackHover img-fluid rounded-circle">
+                    <div class="projectInfo">
+                      <h2>web design</h2>
+                      <h3>3D효과와 원근법</h3>
+                      <h4>스팀 이벤트</h4>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide img-fluid rounded-circle img_box">
+              <div class="web">
+                <a href="food track/index.html" target="_blank">
+                  <div class="img_07 img-fluid rounded-circle"></div>
+                  <div class="blackHover img-fluid rounded-circle">
+                    <div class="projectInfo">
+                      <h2>web design</h2>
+                      <h3>부트스트랩과 그리드</h3>
+                      <h4>푸드트럭 행사</h4>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <!-- <div class="swiper-slide img-fluid rounded-circle img_box">Slide 8</div>
+            <div class="swiper-slide img-fluid rounded-circle img_box">Slide 9</div> -->
+          </div>
+          <div class="swiper-pagination button"></div>
         </div>
       </div>
-    </header>
+    </article>
 
-    <!-- 우측 메인 -->
-    <main role="main">
-      <nav>
-        <ul>
-          <li class="on"><a href="#">web</a></li>
-          <li><a href="#">mobile</a></li>
-        </ul>
-      </nav>
-      <section class="circle">
-        <ul>
-          <li class="web">
-            <a href="PortpolioFrame_deajeon/index.html">
-              <div class="img_1"></div>
-              <div class="blackHover">
-                <div class="projectInfo">
-                  <h2>web design</h2>
-                  <h3>웹사이트 리뉴얼</h3>
-                  <h4>대전관광공사</h4>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="web">
-            <a href="PortpolioFrame_samsung/index.html">
-              <div class="img_2"></div>
-              <div class="blackHover">
-                <div class="projectInfo">
-                  <h2>팀 과제</h2>
-                  <h3>웹사이트 리뉴얼</h3>
-                  <h4>삼성레포츠센터</h4>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="web">
-            <a href="Destiny2/index.html" target="_blank">
-              <div class="img_3"></div>
-              <div class="blackHover">
-                <div class="projectInfo">
-                  <h2>web design</h2>
-                  <h3>마우스 무빙 코딩</h3>
-                  <h4>데스티니 가디언즈</h4>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="web">
-            <a href="Hotel theme/index.html" target="_blank">
-              <div class="img_4"></div>
-              <div class="blackHover">
-                <div class="projectInfo">
-                  <h2>web design</h2>
-                  <h3>반응형 및 테마변경</h3>
-                  <h4>호텔 여름/겨울 이벤트</h4>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="web">
-            <a href="korea 4 seasons/index.html" target="_blank">
-              <div class="img_5"></div>
-              <div class="blackHover">
-                <div class="projectInfo">
-                  <h2>web design</h2>
-                  <h3>마우스 호버 및 제이쿼리</h3>
-                  <h4>한국의 사계절</h4>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="web">
-            <a href="steam/inderx.html" target="_blank">
-              <div class="img_6"></div>
-              <div class="blackHover">
-                <div class="projectInfo">
-                  <h2>web design</h2>
-                  <h3>3D효과와 원근법</h3>
-                  <h4>스팀 이벤트</h4>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="web">
-            <a href="food track/index.html" target="_blank">
-              <div class="img_7"></div>
-              <div class="blackHover">
-                <div class="projectInfo">
-                  <h2>web design</h2>
-                  <h3>부트스트랩과 그리드</h3>
-                  <h4>푸드트럭 행사</h4>
-                </div>
-              </div>
-            </a>
-          </li>
-        </ul>
-      </section> <!--circle end-->
-      <section class="foot">
-        <p>portfolio</p>
-      </section> <!--foot end-->
-    </main>
-  </div> <!--wrap end-->
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>개인용포트폴리오입니다.</span></strong>
+      </div>
+      <div class="credits">
+        MoreDetail to <a href="https://github.com/kcj8686/portfolio_jin">portpolio</a>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  
+
+
 </body>
 </html>
