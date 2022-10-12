@@ -264,23 +264,24 @@ article.inner-page div.button {
     visibility:hidden
   }
   article.inner-page div.list {
-    margin-top: 140px;
+    margin-top: 50px;
   }
   article.inner-page div.list div.mySwiper div.button {
     display: none;
   }
   article.inner-page div.list div.mySwiper div.box div.img_box div.web a div.blackHover {
-    height: 41%; 
+    height: 27.5rem;
+    opacity: .75;
   }
 }
 /* images */
-article.inner-page div.list div.mySwiper div.box div.img_box div.web a div.img_01 {background: center/cover url(../img/expo.jpg) no-repeat; height:440px; transition:all 0.5s;}
-article.inner-page div.list div.mySwiper div.box div.img_box div.web a div.img_02 {background: center/cover url(../img/samsung.jpg) no-repeat; height:440px; transition:all 0.5s;}
-article.inner-page div.list div.mySwiper div.box div.img_box div.web a div.img_03 {background: center/cover url(../img/Destiny2.jpg) no-repeat; height:440px; transition:all 0.5s;}
-article.inner-page div.list div.mySwiper div.box div.img_box div.web a div.img_04 {background: center/cover url(../img/hotel.jpg) no-repeat; height:440px; transition:all 0.5s;}
-article.inner-page div.list div.mySwiper div.box div.img_box div.web a div.img_05 {background: center/cover url(../img/korea\ 4\ seasons.jpg) no-repeat; height:440px; transition:all 0.5s;}
-article.inner-page div.list div.mySwiper div.box div.img_box div.web a div.img_06 {background: center/cover url(../img/steam.jpg) no-repeat; height:440px; transition:all 0.5s;}
-article.inner-page div.list div.mySwiper div.box div.img_box div.web a div.img_07 {background: center/cover url(../img/food_1.jpg) no-repeat; height:440px; transition:all 0.5s;}
+article.inner-page div.list div.mySwiper div.box div.img_box div.web a div.img_01 {background: center/cover url(../img/expo.jpg) no-repeat; height:27.5rem; transition:all 0.5s;}
+article.inner-page div.list div.mySwiper div.box div.img_box div.web a div.img_02 {background: center/cover url(../img/samsung.jpg) no-repeat; height:27.5rem; transition:all 0.5s;}
+article.inner-page div.list div.mySwiper div.box div.img_box div.web a div.img_03 {background: center/cover url(../img/Destiny2.jpg) no-repeat; height:27.5rem; transition:all 0.5s;}
+article.inner-page div.list div.mySwiper div.box div.img_box div.web a div.img_04 {background: center/cover url(../img/hotel.jpg) no-repeat; height:27.5rem; transition:all 0.5s;}
+article.inner-page div.list div.mySwiper div.box div.img_box div.web a div.img_05 {background: center/cover url(../img/korea\ 4\ seasons.jpg) no-repeat; height:27.5rem; transition:all 0.5s;}
+article.inner-page div.list div.mySwiper div.box div.img_box div.web a div.img_06 {background: center/cover url(../img/steam.jpg) no-repeat; height:27.5rem; transition:all 0.5s;}
+article.inner-page div.list div.mySwiper div.box div.img_box div.web a div.img_07 {background: center/cover url(../img/food_1.jpg) no-repeat; height:27.5rem; transition:all 0.5s;}
 
 
 /* footer */
